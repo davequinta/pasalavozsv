@@ -32,7 +32,36 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+@font-face {
+  font-family: "gotham-light";
+  src: url("./assets/fonts/GothamLight.ttf");
+}
+
+@font-face {
+  font-family: "gotham-bold";
+  src: url("./assets/fonts/GothamBold.ttf");
+}
+
+@font-face {
+  font-family: "gotham-medium";
+  src: url("./assets/fonts/GothamMedium.ttf");
+}
+
+.gotham-bold {
+  font-family: 'gotham-bold' !important;
+}
+
+.gotham-medium {
+  font-family: 'gotham-medium' !important;
+}
+
+.gotham-light {
+  font-family: 'gotham-light' !important;
 }
