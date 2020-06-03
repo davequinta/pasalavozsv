@@ -40,28 +40,28 @@
 
 
 @font-face {
-  font-family: "gotham-light";
+  font-family: "Gotham-Light";
   src: url("./assets/fonts/GothamLight.ttf");
 }
 
 @font-face {
-  font-family: "gotham-bold";
+  font-family: "Gotham-Bold";
   src: url("./assets/fonts/GothamBold.ttf");
 }
 
 @font-face {
-  font-family: "gotham-medium";
+  font-family: "Gotham-Medium";
   src: url("./assets/fonts/GothamMedium.ttf");
 }
 
 .gotham-bold {
-  font-family: 'gotham-bold' !important;
+  font-family: 'Gotham-Bold"' !important;
 }
 
 .gotham-medium {
-  font-family: 'gotham-medium' !important;
+  font-family: 'Gotham-Medium' !important;
 }
 
 .gotham-light {
-  font-family: 'gotham-light' !important;
+  font-family: 'Gotham-Light' !important;
 }

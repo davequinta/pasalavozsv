@@ -19,7 +19,7 @@ class HomeScreen extends Component {
         return (
             <>
                 <NavbarComponent />
-                <div className='main-container'>
+                <div className='main-container gotham-medium'>
                     <span>Hola mundo</span>
                 </div>
             </>
