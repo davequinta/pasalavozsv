@@ -1,0 +1,64 @@
+.cont-footer {
+ margin-top: 2rem;
+}
+
+.footer {
+    height: auto;
+    background: #263C4F;
+}
+
+.row-logo {
+    margin: 3rem 0 1rem 0;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+.footer-email {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 14px;
+    color: #FF5A4D;
+}
+
+.footer-txt {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 14px;
+    color: #FFFFFF;
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.footer-txt-2 {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 14px;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-txt-3 {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.txt-row {
+    text-align: center;
+    margin: 3px;
+}

@@ -1,0 +1,24 @@
+.slider {
+    width: 90%;
+    height: 400px;
+    background: #C4C4C4;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.text-container {
+    margin-top: 1rem;
+}
+
+.slide-text {
+    text-align: center;
+}
+
+.btn-slider {
+    background: #263C4F;
+    border-radius: 8px;
+    color: #3AC9CC;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px 0;
+}

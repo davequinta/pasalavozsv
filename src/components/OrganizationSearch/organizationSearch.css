@@ -1,0 +1,50 @@
+.row-search {
+    margin-top: -2rem;
+}
+
+.search-component {
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+}
+
+.form-row-cont {
+    margin: 2rem 0;
+}
+
+.select-container {
+    margin-bottom: 0px;
+}
+
+.select-element {
+    background: #FFFFFF;
+    border: 1px solid rgba(28, 52, 73, 0.5);
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    color: #FF5A4D;
+}
+
+.global-class-name {
+    height: 2rem;
+}
+
+.btn-form {
+    height: 35px;
+    background: #FF5A4D;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-form-2 {
+    height: 35px;
+    background: #263C4F;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cards-row {
+    margin: 2rem 0;
+}

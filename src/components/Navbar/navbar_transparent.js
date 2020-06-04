@@ -1,8 +1,9 @@
 import React from 'react'
+import './Navbar.css'
 
-const NavbarComponent = () => {
+const NavbarTComponent = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top fluid w-100 d-flex justify-content-between" >
+        <nav className="navbar navbar-expand-lg fixed-top fluid w-100 d-flex justify-content-between cont-navbar" >
             <a className="navbar-brand" href="/">Navbar</a>
             <div>
 
@@ -25,4 +26,4 @@ const NavbarComponent = () => {
     )
 }
 
-export default NavbarComponent
+export default NavbarTComponent
