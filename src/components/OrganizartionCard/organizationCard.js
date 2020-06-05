@@ -4,7 +4,7 @@ import './organizationCard.css'
 const OrganizationCardComponent = (props) => {
     const { organization } = props
     return (
-        <div className="col-6 col-sm-3" >
+        <div className="col-6 col-sm-3 btn" onClick={props.moveTo}>
             <div className="row">
                 <div className="img-cont">
 

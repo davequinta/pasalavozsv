@@ -40,7 +40,7 @@ class OrganizationSearchComponent extends React.Component {
                         }
                         break;
                     case 2:
-                    
+
                         if (doc.data().state.includes('San Salvador') || doc.data().state.includes('Chalatenango') || doc.data().state.includes('La Libertad') || doc.data().state.includes('Cuscatlán') || doc.data().state.includes('La Paz')) {
                             selected_docs.push(doc.data())
                         }
@@ -256,6 +256,10 @@ class OrganizationSearchComponent extends React.Component {
         })
     }
 
+    moveOrganizationProfile = (item) => {
+        this.props.history.push('/organizationProfile', { organization: item })
+    }
+
 
     render() {
         return (
@@ -349,7 +353,7 @@ class OrganizationSearchComponent extends React.Component {
                     <div className="col-10">
                         <div className="row justify-content-around">
                             {
-                                this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} key={index.toString()} />)
+                                this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={()=>this.moveOrganizationProfile(organization)} key={index.toString()} />)
                             }
                         </div>
                     </div>
