@@ -1,6 +1,8 @@
 import React from 'react';
 import './organizationSearch.css'
 import { IconContext } from "react-icons"
+import { withRouter } from 'react-router-dom';
+
 import { FaFilter, FaBroom } from 'react-icons/fa';
 import firebase from 'firebase'
 
@@ -25,15 +27,40 @@ class OrganizationSearchComponent extends React.Component {
 
     retrieveOrganizations = async () => {
         let aux_docs = []
+        let selected_docs = []
         const docs = await firebase.firestore().collection('donations').get()
         docs.forEach(doc => {
+
             aux_docs.push(doc.data())
+            if (this.props.location.state.zone) {
+                switch (this.props.location.state.zone) {
+                    case 1:
+                        if (doc.data().state.includes('Santa Ana') || doc.data().state.includes('Ahuachapán') || doc.data().state.includes('Sonsonate')) {
+                            selected_docs.push(doc.data())
+                        }
+                        break;
+                    case 2:
+                    
+                        if (doc.data().state.includes('San Salvador') || doc.data().state.includes('Chalatenango') || doc.data().state.includes('La Libertad') || doc.data().state.includes('Cuscatlán') || doc.data().state.includes('La Paz')) {
+                            selected_docs.push(doc.data())
+                        }
+                        break;
+                    case 3:
+                        if (doc.data().state.includes('San Vicente') || doc.data().state.includes('Usulután') || doc.data().state.includes('San Miguel') || doc.data().state.includes('Morazán') || doc.data().state.includes('La Unión')) {
+                            selected_docs.push(doc.data())
+                        }
+                        break;
+                    default:
+
+                        break;
+                }
+            }
         })
-        this.setState({ organizationsList: aux_docs, organizationsShown: aux_docs })
+        this.setState({ organizationsList: aux_docs, organizationsShown: this.props.location.state.zone ? selected_docs : aux_docs })
     }
 
 
-    
+
 
     _filterHandler = async () => {
 
@@ -199,7 +226,7 @@ class OrganizationSearchComponent extends React.Component {
                             let aux_donations = []
                             donations.forEach(donation => {
                                 if (donation.help_type.includes(this.state.filters.help_type)) {
-                                   
+
                                     aux_donations.push(donation)
                                 }
                             })
@@ -320,7 +347,7 @@ class OrganizationSearchComponent extends React.Component {
 
                 <div className="row justify-content-center cards-row">
                     <div className="col-10">
-                        <div className="row justify-content-between">
+                        <div className="row justify-content-around">
                             {
                                 this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} key={index.toString()} />)
                             }
@@ -333,4 +360,4 @@ class OrganizationSearchComponent extends React.Component {
 
 }
 
-export default OrganizationSearchComponent
+export default withRouter(OrganizationSearchComponent)

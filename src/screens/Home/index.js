@@ -216,7 +216,7 @@ class HomeScreen extends Component {
                             })
                             this.setState({ shown: aux_donations })
                         }
-     
+
                     }
                 }
             }
@@ -224,6 +224,16 @@ class HomeScreen extends Component {
 
 
     }
+
+
+
+    organizationsNavigation = (zone) => {
+        console.log('SENDING ZONE', zone);
+
+        this.props.history.push('/organizations', { zone: zone })
+    }
+
+
     render() {
 
         return (
@@ -231,10 +241,9 @@ class HomeScreen extends Component {
                 <NavbarComponent />
                 <div className='main-container gotham-medium'>
                     <SlideComponent />
-                    <ZonesComponent />
+                    <ZonesComponent navigationOrg={this.organizationsNavigation} />
                     <FooterComponent />
-                    <span>Hola mundo</span>
-                    <button onClick={() => this.getInfo()}>Get info</button>
+
                 </div>
             </>
         )

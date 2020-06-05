@@ -1,7 +1,7 @@
 import React from "react";
 import './zones.css'
 
-const ZonesComponent = () => {
+const ZonesComponent = (props) => {
     return (
         <div className="container-fluid container">
             <div className="row justify-content-center row-text">
@@ -12,13 +12,13 @@ const ZonesComponent = () => {
             <div className="row justify-content-center">
                 <div className="col-12 col-sm-11">
                     <div className="row justify-content-between">
-                        <div className="col-3 zonas">
+                        <div className="col-3 zonas btn" onClick={() => props.navigationOrg(1)}>
 
                         </div>
-                        <div className="col-3 zonas">
+                        <div className="col-3 zonas btn" onClick={() => props.navigationOrg(2)}>
 
                         </div>
-                        <div className="col-3 zonas">
+                        <div className="col-3 zonas btn" onClick={() => props.navigationOrg(3)}>
 
                         </div>
                     </div>
