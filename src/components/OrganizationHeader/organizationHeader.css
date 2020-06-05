@@ -1,0 +1,117 @@
+.cont-header {
+    padding-top: 7rem;
+}
+
+.cont-img{
+    width: 100%;
+    height: 350px;
+    background: #C4C4C4;
+    border-radius: 4px;
+}
+
+.name-txt {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 22px;
+    color: #FF5A4D;
+    margin: 0 0 1.5rem 0;
+}
+
+.desc-txt {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #263C4F;
+}
+
+.type-txt {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #263C4F;
+    margin: 1rem 0;
+}
+
+.org-btn {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    color: #3AC9CC;
+    text-align: center;
+}
+
+.help-btn {
+    background: #263C4F;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+}
+
+.org-detail-info {
+    margin-top: 8rem;
+}
+
+.title-card-org {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 22px;
+    text-align: center;
+    color: #3AC9CC;
+}
+
+.cont-line {
+    border-left: solid #263C4F 1px;
+}
+
+.txt-direction {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin: 0.5rem 0;
+}
+
+.txt-contacts {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.txt-accounts {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.title-cards-org {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    color: #FF5A4D;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.cont-cards-org {
+    margin: 2rem 0 3rem 0;
+}
