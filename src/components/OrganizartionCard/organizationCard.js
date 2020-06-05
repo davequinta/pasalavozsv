@@ -1,9 +1,10 @@
 import React from 'react'
 import './organizationCard.css'
 
-const OrganizationCardComponent = () => {
+const OrganizationCardComponent = (props) => {
+    const { organization } = props
     return (
-        <div className="col-6 col-sm-3">
+        <div className="col-6 col-sm-3" >
             <div className="row">
                 <div className="img-cont">
 
@@ -11,9 +12,9 @@ const OrganizationCardComponent = () => {
             </div>
             <div className="row">
                 <div className="txt-card">
-                    <h3 className="title-txt">Lorem Ipsum</h3>
+                    <h3 className="title-txt">{organization.name}</h3>
                     <p className="cont-txt">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut cursus libero, at gravida tortor. Sed tempus purus eget diam feugiat lacinia. Suspendisse neque magna, placerat vitae convallis nec, pellentesque vitae urna.
+                        {organization.description}
                     </p>
                 </div>
             </div>
