@@ -271,16 +271,18 @@ class OrganizationSearchComponent extends React.Component {
                                 <div className="col-10">
                                     <div className="row">
                                         <div className="form-group col-md-3 select-container">
-                                            <select id="inputState" className="form-control select-element" value={this.state.filters.donation_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, donation_type: value.target.value } })}>
-                                                <option defaultValue value={'none'}>Donación</option>
+                                            <label htmlFor='donationInput' style={{ color: '#FF5A4D' }}>Donación</label>
+                                            <select id="donationInput" className="form-control select-element" value={this.state.filters.donation_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, donation_type: value.target.value } })}>
+                                                <option defaultValue value={'none'}>Todos</option>
                                                 <option value={'Viveres'}>Viveres</option>
                                                 <option value={'Monetarias'}>Monetarias</option>
                                                 <option value={'Art. Primera Necesidad'}>Art. Primera Necesidad</option>
                                             </select>
                                         </div>
                                         <div className="form-group col-md-3 select-container">
-                                            <select id="inputState" className="form-control select-element" value={this.state.filters.collection_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, collection_type: value.target.value } })}>
-                                                <option defaultValue value={'none'}>Recolección</option>
+                                            <label htmlFor='collectionInput' style={{ color: '#FF5A4D' }}>Recolección</label>
+                                            <select id="collectionInput" className="form-control select-element" value={this.state.filters.collection_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, collection_type: value.target.value } })}>
+                                                <option defaultValue value={'none'}>Todos</option>
                                                 <option value={'Centro de Acopio'}>Centro de Acopio</option>
                                                 <option value={'Transferencia Bancaria'}>Transferencia Bancaria</option>
                                                 <option value={'Recolección a domicilio'}>Recolección a domicilio</option>
@@ -288,8 +290,9 @@ class OrganizationSearchComponent extends React.Component {
                                             </select>
                                         </div>
                                         <div className="form-group col-md-3 select-container">
-                                            <select id="inputState" className="form-control select-element" value={this.state.filters.state} onChange={(value) => this.setState({ filters: { ...this.state.filters, state: value.target.value } })}>
-                                                <option defaultValue value={'none'}>Departamento</option>
+                                            <label htmlFor='stateInput' style={{ color: '#FF5A4D' }}>Departamento</label>
+                                            <select id="stateInput" className="form-control select-element" value={this.state.filters.state} onChange={(value) => this.setState({ filters: { ...this.state.filters, state: value.target.value } })}>
+                                                <option defaultValue value={'none'}>Todos</option>
                                                 <option value={'San Salvador'}>San Salvador</option>
                                                 <option value={'San Vicente'}>San Vicente</option>
                                                 <option value={'Santa Ana'}>Santa Ana</option>
@@ -307,8 +310,9 @@ class OrganizationSearchComponent extends React.Component {
                                             </select>
                                         </div>
                                         <div className="form-group col-md-3 select-container">
-                                            <select id="inputState" className="form-control select-element" value={this.state.filters.help_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, help_type: value.target.value } })}>
-                                                <option defaultValue value={'none'} >Para</option>
+                                            <label htmlFor='helpInput' style={{ color: '#FF5A4D' }}>Para</label>
+                                            <select id="helpInput" className="form-control select-element" value={this.state.filters.help_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, help_type: value.target.value } })}>
+                                                <option defaultValue value={'none'} >Todos</option>
                                                 <option value={'Niños'}>Niños</option>
                                                 <option value={'Mujeres'}>Mujeres</option>
                                                 <option value={'Hombres'}>Hombres</option>
@@ -318,29 +322,25 @@ class OrganizationSearchComponent extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-1">
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <div className="btn-form" onClick={this._filterHandler}>
-                                                <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
-                                                    <div >
-                                                        <FaFilter />
-                                                    </div>
-                                                </IconContext.Provider>
-                                            </div>
+                                <div className="col-1 d-flex justify-content-center align-items-end pb-1">
+                                    <div className="w-100">
+                                        <div className="btn-form" onClick={this._filterHandler}>
+                                            <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                                                <div >
+                                                    <FaFilter />
+                                                </div>
+                                            </IconContext.Provider>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-1">
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <div className="btn-form-2" onClick={this.clearFilters}>
-                                                <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
-                                                    <div>
-                                                        <FaBroom />
-                                                    </div>
-                                                </IconContext.Provider>
-                                            </div>
+                                <div className="col-1  d-flex justify-content-center align-items-end pb-1">
+                                    <div className="w-100">
+                                        <div className="btn-form-2" onClick={this.clearFilters}>
+                                            <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
+                                                <div>
+                                                    <FaBroom />
+                                                </div>
+                                            </IconContext.Provider>
                                         </div>
                                     </div>
                                 </div>
@@ -353,7 +353,7 @@ class OrganizationSearchComponent extends React.Component {
                     <div className="col-10">
                         <div className="row justify-content-around">
                             {
-                                this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={()=>this.moveOrganizationProfile(organization)} key={index.toString()} />)
+                                this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={() => this.moveOrganizationProfile(organization)} key={index.toString()} />)
                             }
                         </div>
                     </div>
