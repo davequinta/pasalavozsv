@@ -32,7 +32,7 @@ class OrganizationSearchComponent extends React.Component {
         docs.forEach(doc => {
 
             aux_docs.push(doc.data())
-            if (this.props.location.state.zone) {
+            if (this.props.location.state) {
                 switch (this.props.location.state.zone) {
                     case 1:
                         if (doc.data().state.includes('Santa Ana') || doc.data().state.includes('Ahuachapán') || doc.data().state.includes('Sonsonate')) {
@@ -56,7 +56,7 @@ class OrganizationSearchComponent extends React.Component {
                 }
             }
         })
-        this.setState({ organizationsList: aux_docs, organizationsShown: this.props.location.state.zone ? selected_docs : aux_docs })
+        this.setState({ organizationsList: aux_docs, organizationsShown: this.props.location.state ? selected_docs : aux_docs })
     }
 
 
