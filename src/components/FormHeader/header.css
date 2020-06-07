@@ -1,0 +1,36 @@
+.header {
+    height: 400px;
+    background: #C4C4C4;
+    background-image: url('../../assets/images/form_image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.cover {
+    position: absolute;
+    background: rgba(255, 90, 77, 0.49);
+    width: 100%;
+    height: 100%;
+}
+
+h4 {
+    color: #263C4F;
+    font-family: 'Gotham-Bold';
+}
+
+span {
+    color: #FFFFFF;
+    font-family: 'Gotham-Light';
+    font-size: 14px;
+  
+}
+
+
+.content-container {
+    position: absolute;
+    bottom: 25%;
+    left:  15%;
+    
+}

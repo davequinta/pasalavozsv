@@ -6,6 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom'
 import firebase from 'firebase';
 
+
+
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyB1-M9-CjEIycMpW5_vz4L2YRh-6D_Z3Tc",
   authDomain: "pasalavoz-sv.firebaseapp.com",
@@ -17,12 +21,13 @@ const firebaseConfig = {
   measurementId: "G-CMLC5MKN30"
 };
 
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const RouterApp = (<Router>
-  <App />
+    <App />
 </Router>)
 
 
