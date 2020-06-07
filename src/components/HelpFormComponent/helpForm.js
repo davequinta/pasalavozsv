@@ -32,7 +32,7 @@ class HelpFormComponent extends React.Component {
             mapProperties: {
                 lng: -89.224433,
                 lat: 13.701284,
-                zoom: 8
+                zoom: 12
             },
             loading: true,
 
@@ -68,7 +68,7 @@ class HelpFormComponent extends React.Component {
             navigator.geolocation.getCurrentPosition((position) => {
                 console.log("Latitude is :", position.coords.latitude);
                 console.log("Longitude is :", position.coords.longitude);
-                this.setState({ mapProperties: { lat: position.coords.latitude, lng: position.coords.longitude, zoom: 8 }, loading: false, })
+                this.setState({ mapProperties: { lat: position.coords.latitude, lng: position.coords.longitude, zoom: 12 }, loading: false, })
                 const map = new mapboxgl.Map({
                     container: this.mapContainer,
                     style: 'mapbox://styles/mapbox/streets-v11',
@@ -205,8 +205,8 @@ class HelpFormComponent extends React.Component {
                                 {
                                     this.state.loading ?
 
-                                        <div class="spinner-grow text-primary" style={{ backgroundColor: '#FF5A4D' }} role="status">
-                                            <span class="sr-only">Loading...</span>
+                                        <div className="spinner-grow text-primary" style={{ backgroundColor: '#FF5A4D' }} role="status">
+                                            <span className="sr-only">Loading...</span>
                                         </div>
                                         :
                                         <div ref={el => this.mapContainer = el} className='mapContainer' />
