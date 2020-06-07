@@ -138,7 +138,7 @@ class HelpFormComponent extends React.Component {
 
                                 <div className='col-12 col-md-5 p-0'>
                                     <button type="button" className="btn btn-primary d-flex align-items-center pt-3 justify-content-center" data-toggle="modal" data-target="#exampleModalCenter" style={{ backgroundColor: '#263C4F' }}>
-                                        Selecciona tu ubicación
+                                        Dinos dónde estás
                                     <IconContext.Provider value={{ color: "#FFFFFF", className: "global-class-name ml-2" }}>
                                             <div>
                                                 <FaMap style={{ marginTop: '-5px' }} />
