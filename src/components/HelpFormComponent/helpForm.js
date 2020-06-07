@@ -3,9 +3,11 @@ import './helpForm.css'
 import { IconContext } from "react-icons"
 import { withRouter } from 'react-router-dom';
 
-import { FaMapMarker, FaBroom } from 'react-icons/fa';
+import { FaMapMarker, FaMap } from 'react-icons/fa';
 import firebase from 'firebase'
 import sendIcon from "../../assets/images/send.png";
+import mapboxgl from 'mapbox-gl';
+mapboxgl.accessToken = 'pk.eyJ1IjoibXRyZWpvMTIiLCJhIjoiY2tiNHF4MjFxMHptbTMxcGFibjBlOHR1dyJ9.1YojeT0HnQljEyMcm-_D6Q';
 
 const initState = {
     information: {
@@ -27,6 +29,13 @@ class HelpFormComponent extends React.Component {
         this.state = {
             ...initState,
             sentData: false,
+            mapProperties: {
+                lng: -89.224433,
+                lat: 13.701284,
+                zoom: 8
+            },
+            loading: true,
+
         }
     }
 
@@ -48,8 +57,66 @@ class HelpFormComponent extends React.Component {
 
 
     saveInfo = async () => {
-        await firebase.firestore().collection('helpRequests').add(this.state.information)
+        await firebase.firestore().collection('helpRequests').add({ ...this.state.information, coordinates: { lat: this.state.mapProperties.lat, lng: this.state.mapProperties.lng } })
         this.setState({ ...initState, sentData: true })
+    }
+    componentDidMount() {
+
+
+        if ("geolocation" in navigator) {
+            console.log("Available");
+            navigator.geolocation.getCurrentPosition((position) => {
+                console.log("Latitude is :", position.coords.latitude);
+                console.log("Longitude is :", position.coords.longitude);
+                this.setState({ mapProperties: { lat: position.coords.latitude, lng: position.coords.longitude, zoom: 8 }, loading: false, })
+                const map = new mapboxgl.Map({
+                    container: this.mapContainer,
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [this.state.mapProperties.lng, this.state.mapProperties.lat],
+                    zoom: this.state.mapProperties.zoom,
+                });
+
+                const marker = new mapboxgl.Marker()
+                    .setLngLat([this.state.mapProperties.lng, this.state.mapProperties.lat])
+                    .addTo(map);
+
+
+
+
+                map.on('click', (e) => {
+                    this.setState({ mapProperties: { ...this.state.mapProperties, lng: e.lngLat.lng, lat: e.lngLat.lat } })
+                    marker.setLngLat([this.state.mapProperties.lng, this.state.mapProperties.lat])
+                        .addTo(map);
+                });
+
+            }, error => {
+                const map = new mapboxgl.Map({
+                    container: this.mapContainer,
+                    style: 'mapbox://styles/mapbox/streets-v11',
+                    center: [this.state.mapProperties.lng, this.state.mapProperties.lat],
+                    zoom: this.state.mapProperties.zoom,
+                });
+
+                const marker = new mapboxgl.Marker()
+                    .setLngLat([this.state.mapProperties.lng, this.state.mapProperties.lat])
+                    .addTo(map);
+
+
+
+                map.on('click', (e) => {
+                    this.setState({ mapProperties: { ...this.state.mapProperties, lng: e.lngLat.lng, lat: e.lngLat.lat } })
+                    marker.setLngLat([this.state.mapProperties.lng, this.state.mapProperties.lat])
+                        .addTo(map);
+                });
+
+            });
+        } else {
+            console.log("Not Available");
+        }
+
+
+
+
     }
 
 
@@ -63,17 +130,26 @@ class HelpFormComponent extends React.Component {
                             <label>¿Quién necesita la ayuda?</label>
                             <input type='text' required name='who' value={this.state.information.who} onChange={this.changeHandler} className='col-12 col-md-6 ' />
 
-                            <label>Departamento // Municipio</label>
-                            <input type='text' required name='state' value={this.state.information.state} onChange={this.changeHandler} className='col-12 col-md-6 ' />
+                            <div className='d-flex flex-column flex-md-row justify-content-between align-items-center  w-100'>
+                                <div className=' col-12 col-md-6 p-0'>
+                                    <label>Departamento // Municipio</label>
+                                    <input type='text' required name='state' value={this.state.information.state} onChange={this.changeHandler} />
+                                </div>
+
+                                <div className='col-12 col-md-5 p-0'>
+                                    <button type="button" className="btn btn-primary d-flex align-items-center pt-3 justify-content-center" data-toggle="modal" data-target="#exampleModalCenter" style={{ backgroundColor: '#263C4F' }}>
+                                        Selecciona tu ubicación
+                                    <IconContext.Provider value={{ color: "#FFFFFF", className: "global-class-name ml-2" }}>
+                                            <div>
+                                                <FaMap style={{ marginTop: '-5px' }} />
+                                            </div>
+                                        </IconContext.Provider>
+                                    </button>
+                                </div>
+                            </div>
+
+
                             <label>Dirección</label>
-
-                            {/* <IconContext.Provider value={{ color: "#263C4F", className: "global-class-name" }}>
-                                                <div>
-                                                    <FaMapMarker />
-                                                </div>
-                                            </IconContext.Provider> */}
-
-
                             <input type='text' required name='address' value={this.state.information.address} onChange={this.changeHandler} className='col-12 col-md-6 ' />
                             <div className='d-flex flex-column flex-md-row justify-content-between  w-100'>
                                 <div className=' col-12 col-md-6 p-0'>
@@ -113,23 +189,31 @@ class HelpFormComponent extends React.Component {
                             </div>
                         </form>
                     </div>
+
                 </div>
 
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div className="modal-dialog modal-dialog-centered" role="document">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="exampleModalLongTitle">Selecciona tu ubicación</h5>
+                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                ...
-      </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                            <div className="modal-body d-flex justify-content-center align-items-center">
+                                {
+                                    this.state.loading ?
+
+                                        <div class="spinner-grow text-primary" style={{ backgroundColor: '#FF5A4D' }} role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        :
+                                        <div ref={el => this.mapContainer = el} className='mapContainer' />
+                                }
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary d-flex align-items-center pt-3 justify-content-center" data-dismiss="modal" style={{ backgroundColor: '#263C4F' }}>Guardar</button>
                             </div>
                         </div>
                     </div>
