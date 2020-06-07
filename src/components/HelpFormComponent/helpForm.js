@@ -60,12 +60,12 @@ class HelpFormComponent extends React.Component {
         await firebase.firestore().collection('helpRequests').add({ ...this.state.information, coordinates: { lat: this.state.mapProperties.lat, lng: this.state.mapProperties.lng } })
         this.setState({ ...initState, sentData: true })
     }
-    componentDidMount() {
+    async  componentDidMount() {
 
 
         if ("geolocation" in navigator) {
             console.log("Available");
-            navigator.geolocation.getCurrentPosition((position) => {
+            await navigator.geolocation.getCurrentPosition((position) => {
                 console.log("Latitude is :", position.coords.latitude);
                 console.log("Longitude is :", position.coords.longitude);
                 this.setState({ mapProperties: { lat: position.coords.latitude, lng: position.coords.longitude, zoom: 12 }, loading: false, })
@@ -113,6 +113,7 @@ class HelpFormComponent extends React.Component {
         } else {
             console.log("Not Available");
         }
+
 
 
 
@@ -202,15 +203,9 @@ class HelpFormComponent extends React.Component {
                                 </button>
                             </div>
                             <div className="modal-body d-flex justify-content-center align-items-center">
-                                {
-                                    this.state.loading ?
 
-                                        <div className="spinner-grow text-primary" style={{ backgroundColor: '#FF5A4D' }} role="status">
-                                            <span className="sr-only">Loading...</span>
-                                        </div>
-                                        :
-                                        <div ref={el => this.mapContainer = el} className='mapContainer' />
-                                }
+                                <div ref={el => this.mapContainer = el} className='mapContainer' />
+
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary d-flex align-items-center pt-3 justify-content-center" data-dismiss="modal" style={{ backgroundColor: '#263C4F' }}>Guardar</button>
