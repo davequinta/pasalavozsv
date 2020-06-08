@@ -168,7 +168,7 @@ class OrganizationHeaderComponent extends React.Component {
 
                                         </div>
                                     </div>
-                                    <div className="col-4 cont-line">
+                                    <div className="col-4 cont-line d-flex flex-column">
                                         <div className="title-card-org">
                                             <IconContext.Provider value={{ color: "#3AC9CC", className: "global-class-name " }}>
                                                 <div className='gotham-medium'>
@@ -177,12 +177,14 @@ class OrganizationHeaderComponent extends React.Component {
                                             </IconContext.Provider>
                                         </div>
                                         <div className="txt-accounts gotham-medium">
-                                            {this.state.organization.accounts.map(contact => (
-                                                <div className="contact">
-                                                    <span style={{ color: '#263C4F' }}>  <strong>{contact.bank}:</strong> {contact.accountNumber}</span>
-                                                    <span style={{ color: '#263C4F' }}>{contact.name}</span>
-                                                </div>
-                                            ))}
+                                            {
+                                                this.state.organization.accounts.map(contact => contact.accountNumber !== '' ? (
+                                                    <div className="contact">
+                                                        <span style={{ color: '#263C4F' }}>  <strong>{contact.bank}:</strong> {contact.accountNumber}</span>
+                                                        <br></br>
+                                                        <span style={{ color: '#263C4F' }}>{contact.name}</span>
+                                                    </div>
+                                                ) : null)}
                                         </div>
                                     </div>
                                 </div>
