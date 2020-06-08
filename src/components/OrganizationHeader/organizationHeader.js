@@ -25,14 +25,14 @@ class OrganizationHeaderComponent extends React.Component {
         return (
             <div className="container-fluid cont-header ">
                 <div className="row justify-content-center">
-                    <div className="col-12 col-sm-10">
+                    <div className="col-11 col-md-10">
                         <div className="row align-items-center">
-                            <div className="col-12 col-sm-5">
+                            <div className="col-12 col-sm-6 col-lg-5">
                                 <div className="cont-img">
-
+                                    <img className="img-org" src={require('../../assets/img/org.png')}></img>
                                 </div>
                             </div>
-                            <div className="col-12 col-sm-7">
+                            <div className="col-12 col-sm-6 col-lg-7 cont-info-org">
                                 <div className="name-txt gotham-medium">
                                     {this.state.organization.name}
                                 </div>
@@ -97,9 +97,9 @@ class OrganizationHeaderComponent extends React.Component {
                                     }
                                 </div>
                                 <div className="org-btn">
-                                    <div className="row">
-                                        <div className="col-4">
-                                            <div className="help-btn gotham-medium d-flex align-items-center justify-content-center pt-3" onClick={() => this.props.history.push('/helpForm')}>
+                                    <div className="row btn-cont-help">
+                                        <div className="col-12 col-sm-6 col-lg-4">
+                                            <div className="help-btn gotham-medium d-flex align-items-center justify-content-center" onClick={() => this.props.history.push('/helpForm')}>
                                                 Solicitá Ayuda
                                         </div>
                                         </div>
@@ -109,9 +109,9 @@ class OrganizationHeaderComponent extends React.Component {
                         </div>
 
                         <div className="row justify-content-center org-detail-info">
-                            <div className="col-10">
-                                <div className="row align-items-center justify-content-center">
-                                    <div className="col-4">
+                            <div className="col-12 col-lg-10">
+                                <div className="row justify-content-center">
+                                    <div className="col-12 col-sm-4 cont-org-other-info">
                                         <div className="title-card-org">
                                             <IconContext.Provider value={{ color: "#3AC9CC", className: "global-class-name" }}>
                                                 <div className='gotham-medium'>
@@ -123,7 +123,7 @@ class OrganizationHeaderComponent extends React.Component {
                                             {this.state.organization.address}
                                         </div>
                                     </div>
-                                    <div className="col-4 cont-line">
+                                    <div className="col-12 col-sm-4 cont-org-other-info cont-line">
                                         <div className="title-card-org">
                                             <IconContext.Provider value={{ color: "#3AC9CC", className: "global-class-name" }}>
                                                 <div className='gotham-medium'>
@@ -168,7 +168,7 @@ class OrganizationHeaderComponent extends React.Component {
 
                                         </div>
                                     </div>
-                                    <div className="col-4 cont-line d-flex flex-column">
+                                    <div className="col-12 col-sm-4 cont-org-other-info cont-line d-flex flex-column">
                                         <div className="title-card-org">
                                             <IconContext.Provider value={{ color: "#3AC9CC", className: "global-class-name " }}>
                                                 <div className='gotham-medium'>
@@ -187,19 +187,6 @@ class OrganizationHeaderComponent extends React.Component {
                                                 ) : null)}
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col-12 title-cards-org gotham-medium">
-                                Otras iniciativas
-                        </div>
-                            <div className="col-12 cont-cards-org">
-                                <div className="row justify-content-between align-items-center">
-                                    <OrganizationCardMiniComponent />
-                                    <OrganizationCardMiniComponent />
-                                    <OrganizationCardMiniComponent />
                                 </div>
                             </div>
                         </div>
