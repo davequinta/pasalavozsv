@@ -132,7 +132,7 @@ class HelpFormComponent extends React.Component {
                             <input type='text' required name='who' value={this.state.information.who} onChange={this.changeHandler} className='col-12 col-md-6 ' />
 
                             <div className='d-flex flex-column flex-md-row justify-content-between align-items-center  w-100'>
-                                <div className=' col-12 col-md-6 p-0'>
+                                <div className='d-flex flex-column col-12 col-md-6 p-0'>
                                     <label>Departamento // Municipio</label>
                                     <input type='text' required name='state' value={this.state.information.state} onChange={this.changeHandler} />
                                 </div>
