@@ -126,7 +126,7 @@ class HelpFormComponent extends React.Component {
             <div className="container-fluid">
                 <div className="row justify-content-center row-search-form">
                     <div className="col-10 col-md-6 search-component form-container">
-                        <h3>Solicitud de ayuda</h3>
+                        <h3 className="h3-txt">Solicitud de ayuda</h3>
                         <form className='d-flex flex-column ' onSubmit={this.checkEmpty}>
                             <label>¿Quién necesita la ayuda?</label>
                             <input type='text' required name='who' value={this.state.information.who} onChange={this.changeHandler} className='col-12 col-md-6 ' />
@@ -137,8 +137,8 @@ class HelpFormComponent extends React.Component {
                                     <input type='text' required name='state' value={this.state.information.state} onChange={this.changeHandler} />
                                 </div>
 
-                                <div className='col-12 col-md-5 p-0'>
-                                    <button type="button" className="btn btn-primary d-flex align-items-center pt-3 justify-content-center" data-toggle="modal" data-target="#exampleModalCenter" style={{ backgroundColor: '#263C4F' }}>
+                                <div className='col-12 col-md-5 p-0 btn-dde'>
+                                    <button type="button" className="btn btn-primary d-flex align-items-center w-100 justify-content-center" data-toggle="modal" data-target="#exampleModalCenter" style={{ backgroundColor: '#263C4F' }}>
                                         Dinos dónde estás
                                     <IconContext.Provider value={{ color: "#FFFFFF", className: "global-class-name ml-2" }}>
                                             <div>
@@ -168,17 +168,18 @@ class HelpFormComponent extends React.Component {
                             <div className='d-flex flex-column flex-md-row justify-content-between mt-4'>
                                 <div className='col-12 col-md-3 p-0'>
                                     <label >No. Niños</label>
-                                    <input type='number' min='0' name='kids' value={this.state.information.kids} onChange={this.changeHandler} />
+                                    <input type='number' min='0' name='kids' value={this.state.information.kids} onChange={this.changeHandler} className='w-100'/>
                                 </div>
 
                                 <div className='col-12 col-md-3 p-0'>
                                     <label>No.Adultos</label>
-                                    <input type='number' min='0' name='adults' value={this.state.information.adults} onChange={this.changeHandler} />
+                                    <input type='number' min='0' name='adults' value={this.state.information.adults} onChange={this.changeHandler} className='w-100'/>
                                 </div>
                                 <div className='col-12 col-md-3 p-0'>
                                     <label >No. Adultos Mayores</label>
                                     <input type='number' min='0' name='elder' value={this.state.information.elder} onChange={this.changeHandler} className='w-100' />
-                                </div>                            </div>
+                                </div>                            
+                            </div>
                             <div className={this.state.sentData ? 'd-flex w-100 justify-content-between mt-4 mt-md-5 ' : 'd-flex w-100 justify-content-end mt-4 mt-md-5'}>
                                 {this.state.sentData ?
                                     <span style={{ color: '#FF5A4D', alignSelf: 'center', fontWeight: 'bold' }}> Gracias por registrar tu solicitud.</span>
@@ -208,7 +209,7 @@ class HelpFormComponent extends React.Component {
 
                             </div>
                             <div className="modal-footer">
-                                <button type="button" className="btn btn-secondary d-flex align-items-center pt-3 justify-content-center" data-dismiss="modal" style={{ backgroundColor: '#263C4F' }}>Guardar</button>
+                                <button type="button" className="btn btn-secondary d-flex align-items-center justify-content-center" data-dismiss="modal" style={{ backgroundColor: '#263C4F' }}>Guardar</button>
                             </div>
                         </div>
                     </div>
