@@ -8,7 +8,7 @@ const FooterComponent = () => {
             <div className="row">
                 <div className="col-12 footer">
                     <div className="row justify-content-center">
-                        <div className="col-5">
+                        <div className="col-10 col-sm-9 col-md-6 col-lg-5">
                             <div className="row justify-content-center row-logo">
                                 <div className="col-5">
                                     <img className="logo" src={require('../../assets/img/pasalavoz.png')}></img>

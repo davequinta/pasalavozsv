@@ -1,5 +1,5 @@
 .row-search {
-    margin-top: -2rem;
+    margin-top: -1rem;
 }
 
 .search-component {
@@ -17,12 +17,26 @@
     margin-bottom: 0px;
 }
 
+.label-filter {
+    padding: 0px;
+    margin: 0;
+}
+
 .select-element {
     background: #FFFFFF;
     border: 1px solid rgba(28, 52, 73, 0.5);
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     color: #FF5A4D;
+}
+
+.option-select {
+    color: #FF5A4D;
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
 }
 
 .global-class-name {
@@ -47,4 +61,32 @@
 
 .cards-row {
     margin: 2rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-form {
+        height: 35px;
+        background: #FF5A4D;
+        box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        text-align: center;
+        margin: 1rem 0 0 0;
+    }
+    
+    .btn-form-2 {
+        height: 35px;
+        background: #263C4F;
+        box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        text-align: center;
+        margin: 1rem 0 0 0;
+    }
+
+    .select-element {
+        border: 1px solid rgba(28, 52, 73, 0.5);
+        box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        color: #FF5A4D;
+        font-size: 12px;
+    }
 }

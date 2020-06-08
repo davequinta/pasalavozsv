@@ -13,8 +13,126 @@
     font-size: 1.5rem;
 }
 
-.zonas {
+.zona-occ {
     height: 300px;
     background: #C4C4C4;
     border-radius: 4px;
+    background-image: url('../../assets/img/occ_zone.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+
+.zona-cen {
+    height: 300px;
+    background: #C4C4C4;
+    border-radius: 4px;
+    background-image: url('../../assets/img/occ_zone.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+
+.zona-ori {
+    height: 300px;
+    background: #C4C4C4;
+    border-radius: 4px;
+    background-image: url('../../assets/img/ori_zone.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150%;
+}
+
+.zone-cont-txt {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.zone-txt {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FF5A4D;
+    text-align: center;
+}
+
+@media screen and (max-width:992px) {
+    .zona-occ {
+        height: 250px;
+        background: #C4C4C4;
+        border-radius: 4px;
+        background-image: url('../../assets/img/occ_zone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+    }
+    
+    .zona-cen {
+        height: 250px;
+        background: #C4C4C4;
+        border-radius: 4px;
+        background-image: url('../../assets/img/occ_zone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+    }
+    
+    .zona-ori {
+        height: 250px;
+        background: #C4C4C4;
+        border-radius: 4px;
+        background-image: url('../../assets/img/ori_zone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .zona-occ {
+        height: 250px;
+        background: #C4C4C4;
+        border-radius: 4px;
+        background-image: url('../../assets/img/occ_zone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+        margin: 0.5rem 0;
+    }
+    
+    .zona-cen {
+        height: 250px;
+        background: #C4C4C4;
+        border-radius: 4px;
+        background-image: url('../../assets/img/occ_zone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+        margin: 0.5rem 0;
+    }
+    
+    .zona-ori {
+        height: 250px;
+        background: #C4C4C4;
+        border-radius: 4px;
+        background-image: url('../../assets/img/ori_zone.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 150%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .text-zone {
+        width: 100%;
+        text-align: center;
+        color: #FF5A4D;
+        font-size: 1.2rem;
+    }
 }

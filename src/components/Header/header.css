@@ -1,4 +1,12 @@
 .header {
-    height: 400px;
-    background: #C4C4C4;
+    height: auto;
+    background:#2e4259;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-img {
+    width: 100%;
+    height: auto;
 }

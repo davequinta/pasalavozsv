@@ -4,9 +4,28 @@
     z-index: 1;
 }
 
+.nav-link-2 {
+    color: black;
+    font-size: 18px;
+    margin: 0 2rem;
+    transition: 0.3s;
+}
+
+.nav-link-2:hover {
+    color: gray;
+    font-size: 18px;
+    margin: 0 2rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
 /*For transparent navbar*/
 .cont-navbar {
-    
+    margin: 0;
+}
+
+.btn-nav {
+    text-align: end;
 }
 
 .logo-cont {
@@ -21,8 +40,58 @@
     margin: 0.7rem 0.5rem;
 }
 
-.nav-link {
-    color: #000000;
+.navbar-light .navbar-nav .nav-link {
+    color: white;
     font-size: 18px;
     margin: 0 2rem;
+    transition: 0.3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: gray;
+    font-size: 18px;
+    margin: 0 2rem;
+    transition: 0.3s;
+}
+
+.navbar-toggler {
+    background-color: white;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-item-2 {
+        background: radial-gradient(#263C4F, transparent);
+        -webkit-box-shadow: 10px 10px 100px 0px #263C4F;
+        -moz-box-shadow: 10px 10px 100px 0px #263C4F;
+        box-shadow: 10px 10px 100px 0px #263C4F;
+        transition: 0.5s;
+    }
+
+    .nav-link-2 {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .logo-cont {
+        background: #263C4F;
+        border-radius: 50%;
+        margin: 0 0 0 1rem;
+    }
+    
+    .logo-navbar {
+        width: 50px;
+        height: auto;
+        margin: 0.5rem 0.3rem;
+    }
+
+    .nav-link {
+        color: white;
+        font-size: 18px;
+        margin: 0 2rem;
+        transition: 0.3s;
+    }
+
 }

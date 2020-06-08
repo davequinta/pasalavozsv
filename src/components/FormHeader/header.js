@@ -5,7 +5,7 @@ const HeaderComponent = () => {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-12 header p-0">
+                <div className="col-12 header-form p-0">
                     <div className='cover'>
                         <div className='content-container gotham-medium'>
                             <h4>¿Quién necesita ayuda?</h4>

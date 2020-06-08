@@ -62,3 +62,47 @@
     text-align: center;
     margin: 3px;
 }
+
+@media screen and (max-width: 576px) {
+    .footer-email {
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 14px;
+        color: #FF5A4D;
+    }
+    
+    .footer-txt {
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 14px;
+        color: #FFFFFF;
+        margin-top: 1.5rem;
+        padding: 0;
+    }
+    
+    .footer-txt-2 {
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 14px;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer-txt-3 {
+        font-family: Gotham;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 14px;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+}

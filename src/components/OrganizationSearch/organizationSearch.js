@@ -265,64 +265,64 @@ class OrganizationSearchComponent extends React.Component {
         return (
             <div className="container-fluid">
                 <div className="row justify-content-center row-search">
-                    <div className="col-10 search-component">
+                    <div className="col-11 col-md-10 search-component">
                         <form>
                             <div className="form-row form-row-cont">
-                                <div className="col-10">
+                                <div className="col-12 col-md-10">
                                     <div className="row">
-                                        <div className="form-group col-md-3 select-container">
-                                            <label htmlFor='donationInput' style={{ color: '#FF5A4D' }}>Donación</label>
+                                        <div className="form-group col-12 col-sm-6 col-md-3 select-container">
+                                            <label className="label-filter" htmlFor='donationInput' style={{ color: '#FF5A4D' }}>Donación</label>
                                             <select id="donationInput" className="form-control select-element" value={this.state.filters.donation_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, donation_type: value.target.value } })}>
-                                                <option defaultValue value={'none'}>Todos</option>
-                                                <option value={'Viveres'}>Viveres</option>
-                                                <option value={'Monetarias'}>Monetarias</option>
-                                                <option value={'Art. Primera Necesidad'}>Art. Primera Necesidad</option>
+                                                <option className="option-select" defaultValue value={'none'}>Todos</option>
+                                                <option className="option-select" value={'Viveres'}>Viveres</option>
+                                                <option className="option-select" value={'Monetarias'}>Monetarias</option>
+                                                <option className="option-select" value={'Art. Primera Necesidad'}>Art. Primera Necesidad</option>
                                             </select>
                                         </div>
-                                        <div className="form-group col-md-3 select-container">
-                                            <label htmlFor='collectionInput' style={{ color: '#FF5A4D' }}>Recolección</label>
+                                        <div className="form-group col-12 col-sm-6 col-md-3 select-container">
+                                            <label className="label-filter" htmlFor='collectionInput' style={{ color: '#FF5A4D' }}>Recolección</label>
                                             <select id="collectionInput" className="form-control select-element" value={this.state.filters.collection_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, collection_type: value.target.value } })}>
-                                                <option defaultValue value={'none'}>Todos</option>
-                                                <option value={'Centro de Acopio'}>Centro de Acopio</option>
-                                                <option value={'Transferencia Bancaria'}>Transferencia Bancaria</option>
-                                                <option value={'Recolección a domicilio'}>Recolección a domicilio</option>
+                                                <option className="option-select" defaultValue value={'none'}>Todos</option>
+                                                <option className="option-select" value={'Centro de Acopio'}>Centro de Acopio</option>
+                                                <option className="option-select" value={'Transferencia Bancaria'}>Transferencia Bancaria</option>
+                                                <option className="option-select" value={'Recolección a domicilio'}>Recolección a domicilio</option>
 
                                             </select>
                                         </div>
-                                        <div className="form-group col-md-3 select-container">
-                                            <label htmlFor='stateInput' style={{ color: '#FF5A4D' }}>Departamento</label>
+                                        <div className="form-group col-12 col-sm-6 col-md-3 select-container">
+                                            <label className="label-filter" htmlFor='stateInput' style={{ color: '#FF5A4D' }}>Departamento</label>
                                             <select id="stateInput" className="form-control select-element" value={this.state.filters.state} onChange={(value) => this.setState({ filters: { ...this.state.filters, state: value.target.value } })}>
-                                                <option defaultValue value={'none'}>Todos</option>
-                                                <option value={'San Salvador'}>San Salvador</option>
-                                                <option value={'San Vicente'}>San Vicente</option>
-                                                <option value={'Santa Ana'}>Santa Ana</option>
-                                                <option value={'San Miguel'}>San Miguel</option>
-                                                <option value={'La Paz'}>La Paz</option>
-                                                <option value={'La Libertad'}>La Libertad</option>
-                                                <option value={'La Unión'}>La Unión</option>
-                                                <option value={'Usulután'}>Usulután</option>
-                                                <option value={'Cuscatlán'}>Cuscatlán</option>
-                                                <option value={'Morazán'}>Morazán</option>
-                                                <option value={'Ahuachapán'}>Ahuachapán</option>
-                                                <option value={'Cabañas'}>Cabañas</option>
-                                                <option value={'Sonsonate'}>Sonsonate</option>
-                                                <option value={'Chalatenango'}>Chalatenango</option>
+                                                <option className="option-select" defaultValue value={'none'}>Todos</option>
+                                                <option className="option-select" value={'San Salvador'}>San Salvador</option>
+                                                <option className="option-select" value={'San Vicente'}>San Vicente</option>
+                                                <option className="option-select" value={'Santa Ana'}>Santa Ana</option>
+                                                <option className="option-select" value={'San Miguel'}>San Miguel</option>
+                                                <option className="option-select" value={'La Paz'}>La Paz</option>
+                                                <option className="option-select" value={'La Libertad'}>La Libertad</option>
+                                                <option className="option-select" value={'La Unión'}>La Unión</option>
+                                                <option className="option-select" value={'Usulután'}>Usulután</option>
+                                                <option className="option-select" value={'Cuscatlán'}>Cuscatlán</option>
+                                                <option className="option-select" value={'Morazán'}>Morazán</option>
+                                                <option className="option-select" value={'Ahuachapán'}>Ahuachapán</option>
+                                                <option className="option-select" value={'Cabañas'}>Cabañas</option>
+                                                <option className="option-select" value={'Sonsonate'}>Sonsonate</option>
+                                                <option className="option-select" value={'Chalatenango'}>Chalatenango</option>
                                             </select>
                                         </div>
-                                        <div className="form-group col-md-3 select-container">
-                                            <label htmlFor='helpInput' style={{ color: '#FF5A4D' }}>Para</label>
+                                        <div className="form-group col-12 col-sm-6 col-md-3 select-container">
+                                            <label className="label-filter" htmlFor='helpInput' style={{ color: '#FF5A4D' }}>Para</label>
                                             <select id="helpInput" className="form-control select-element" value={this.state.filters.help_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, help_type: value.target.value } })}>
-                                                <option defaultValue value={'none'} >Todos</option>
-                                                <option value={'Niños'}>Niños</option>
-                                                <option value={'Mujeres'}>Mujeres</option>
-                                                <option value={'Hombres'}>Hombres</option>
-                                                <option value={'Adultos Mayores'}>Adultos Mayores</option>
+                                                <option className="option-select" defaultValue value={'none'} >Todos</option>
+                                                <option className="option-select" value={'Niños'}>Niños</option>
+                                                <option className="option-select" value={'Mujeres'}>Mujeres</option>
+                                                <option className="option-select" value={'Hombres'}>Hombres</option>
+                                                <option className="option-select" value={'Adultos Mayores'}>Adultos Mayores</option>
 
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-1 d-flex justify-content-center align-items-end pb-1">
+                                <div className="col-12 col-sm-6 col-md-1 d-flex justify-content-center align-items-end pb-1">
                                     <div className="w-100">
                                         <div className="btn-form" onClick={this._filterHandler}>
                                             <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
@@ -333,7 +333,7 @@ class OrganizationSearchComponent extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-1  d-flex justify-content-center align-items-end pb-1">
+                                <div className="col-12 col-sm-6 col-md-1 d-flex justify-content-center align-items-end pb-1">
                                     <div className="w-100">
                                         <div className="btn-form-2" onClick={this.clearFilters}>
                                             <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
@@ -351,7 +351,7 @@ class OrganizationSearchComponent extends React.Component {
 
                 <div className="row justify-content-center cards-row">
                     <div className="col-10">
-                        <div className="row justify-content-around">
+                        <div className="row justify-content-between">
                             {
                                 this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={() => this.moveOrganizationProfile(organization)} key={index.toString()} />)
                             }

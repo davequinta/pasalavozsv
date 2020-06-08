@@ -124,7 +124,7 @@ class HelpFormComponent extends React.Component {
     render() {
         return (
             <div className="container-fluid">
-                <div className="row justify-content-center row-search">
+                <div className="row justify-content-center row-search-form">
                     <div className="col-10 col-md-6 search-component form-container">
                         <h3>Solicitud de ayuda</h3>
                         <form className='d-flex flex-column ' onSubmit={this.checkEmpty}>
