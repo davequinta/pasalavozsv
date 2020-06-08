@@ -21,13 +21,12 @@ const firebaseConfig = {
   measurementId: "G-CMLC5MKN30"
 };
 
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 const RouterApp = (<Router>
-    <App />
+  <App />
 </Router>)
 
 

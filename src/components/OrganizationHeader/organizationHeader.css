@@ -2,7 +2,7 @@
     padding-top: 7rem;
 }
 
-.cont-img{
+.cont-img {
     width: 100%;
     height: 350px;
     background: #C4C4C4;
@@ -50,6 +50,7 @@
     background: #263C4F;
     border-radius: 8px;
     padding: 0.5rem 0;
+    cursor: pointer;
 }
 
 .org-detail-info {
