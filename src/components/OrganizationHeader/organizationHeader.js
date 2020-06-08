@@ -155,13 +155,13 @@ class OrganizationHeaderComponent extends React.Component {
                                             {this.state.organization.contacts[0].facebook === '' || this.state.organization.contacts[0].facebook === ' ' ?
                                                 null :
                                                 (<div className=" gotham-bold" >
-                                                    <span style={{ color: '#263C4F' }}><strong>Teléfono:</strong> {this.state.organization.contacts[0].facebook}</span>
+                                                    <span style={{ color: '#263C4F' }}><strong>Facebook:</strong> {this.state.organization.contacts[0].facebook}</span>
                                                 </div>)
                                             }
                                             {this.state.organization.contacts[0].instagram === '' || this.state.organization.contacts[0].instagram === ' ' ?
                                                 null :
                                                 (<div className=" gotham-bold" >
-                                                    <span style={{ color: '#263C4F' }}><strong>Teléfono:</strong> {this.state.organization.contacts[0].instagram}</span>
+                                                    <span style={{ color: '#263C4F' }}><strong>Instagram:</strong> {this.state.organization.contacts[0].instagram}</span>
                                                 </div>)
                                             }
 
