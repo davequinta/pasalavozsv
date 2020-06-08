@@ -27,6 +27,10 @@ class HomeScreen extends Component {
         this.props.history.push('/helpForm')
     }
 
+    organizationsNavigation = (value) => {
+        this.props.history.push('/organizations', { zone: value })
+    }
+
     render() {
 
         return (
