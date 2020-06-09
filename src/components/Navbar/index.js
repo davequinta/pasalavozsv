@@ -16,11 +16,11 @@ const NavbarComponent = () => {
                 </div>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ">
-                        <li className="nav-item">
-                            <a className="nav-link-2" href="/organizations">Organizaciones</a>
+                        <li className="nav-item gotham-medium"  >
+                            <a className="nav-link" href="/organizations" style={{color:'#000000'}}>Organizaciones</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link-2" href="/helpForm">Solicitar ayuda</a>
+                        <li className="nav-item gotham-medium">
+                            <a className="nav-link" href="/helpForm" style={{color:'#000000'}}>Solicitar ayuda</a>
                         </li>
 
                     </ul>

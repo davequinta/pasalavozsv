@@ -369,7 +369,12 @@ class OrganizationSearchComponent extends React.Component {
                     <div className="col-10">
                         <div className="row justify-content-around">
                             {
+                                this.state.organizationsShown.length>0 ?
                                 this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={() => this.moveOrganizationProfile(organization)} key={index.toString()} />)
+                                : 
+                                <section className='d-flex justify-content-center align-item-center mt-3' style={{height:'5rem'}}>
+                                    <span className='gotham-medium' style={{color:'#000000'}}>Aún no tenemos información registrada para esta búsqueda.</span>
+                                </section>
                             }
                         </div>
                     </div>

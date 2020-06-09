@@ -31,10 +31,10 @@ const NavbarTComponent = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                         <li className="nav-item nav-item-2">
-                            <a className="nav-link" href="/organizations">Organizaciones</a>
+                            <a className="nav-link gotham-medium" href="/organizations">Organizaciones</a>
                         </li>
                         <li className="nav-item nav-item-2">
-                            <a className="nav-link" href="/helpForm">Solicitar ayuda</a>
+                            <a className="nav-link gotham-medium" href="/helpForm">Solicitar ayuda</a>
                         </li>
 
                     </ul>

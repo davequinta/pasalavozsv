@@ -9,7 +9,7 @@ const OrganizationCardComponent = (props) => {
                 <div className="img-cont col-12">
                     <div className="row justify-content-center align-items-center row-txt-cont">
                         <div className="col-12">
-                            <h3 className="title-txt">{organization.name}</h3>
+                            <h3 className="title-txt gotham-medium">{organization.name}</h3>
 
                         </div>
                     </div>

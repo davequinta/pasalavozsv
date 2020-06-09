@@ -14,22 +14,22 @@ const ZonesComponent = (props) => {
                     <div className="row justify-content-md-between justify-content-around justify-content-center justify-content-center">
                         <div className="col-8 col-sm-5 col-md-3 zona-occ btn" onClick={() => props.navigationOrg(1)}>
                             <div className="row justify-content-center align-items-center zone-cont-txt">
-                                <div className="col zone-txt">
-                                    ZONA OCCIDENTAL
+                                <div className="col zone-txt gotham-medium">
+                                   <p>ZONA OCCIDENTAL</p> 
                                 </div>
                             </div>  
                         </div>
                         <div className="col-8 col-sm-5 col-md-3 zona-cen btn" onClick={() => props.navigationOrg(2)}>
                             <div className="row justify-content-center align-items-center zone-cont-txt">
-                                <div className="col zone-txt">
-                                    ZONA CENTRAL
+                                <div className="col zone-txt gotham-medium">
+                                    <p>ZONA CENTRAL</p>
                                 </div>
                             </div>
                         </div>
                         <div className="col-8 col-sm-5 col-md-3 zona-ori btn" onClick={() => props.navigationOrg(3)}>
                             <div className="row justify-content-center align-items-center zone-cont-txt">
-                                <div className="col zone-txt">
-                                    ZONA ORIENTAL
+                                <div className="col zone-txt gotham-medium">
+                                   <p>ZONA ORIENTAL</p> 
                                 </div>
                             </div>
                         </div>
