@@ -279,7 +279,7 @@ class OrganizationSearchComponent extends React.Component {
                                     <div className="row">
                                         <div className="form-group col-12 col-sm-6 col-md-3 select-container">
                                             <label className="label-filter" htmlFor='donationInput' style={{ color: '#FF5A4D' }}>Donación</label>
-                                            <select id="donationInput" className="form-control select-element" value={this.state.filters.donation_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, donation_type: value.target.value } })}>
+                                            <select id="donationInput" className="form-control custom-select" value={this.state.filters.donation_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, donation_type: value.target.value } })}>
                                                 <option className="option-select" defaultValue value={'none'}>Todos</option>
                                                 <option className="option-select" value={'Víveres/art. primera necesidad'}>Víveres/art. primera necesidad</option>
                                                 <option className="option-select" value={'Monetaria'}>Monetaria</option>
@@ -295,7 +295,7 @@ class OrganizationSearchComponent extends React.Component {
                                         </div>
                                         <div className="form-group col-12 col-sm-6 col-md-3 select-container">
                                             <label className="label-filter" htmlFor='collectionInput' style={{ color: '#FF5A4D' }}>Recolección</label>
-                                            <select id="collectionInput" className="form-control select-element" value={this.state.filters.collection_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, collection_type: value.target.value } })}>
+                                            <select id="collectionInput" className="form-control custom-select" value={this.state.filters.collection_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, collection_type: value.target.value } })}>
                                                 <option className="option-select" defaultValue value={'none'}>Todos</option>
                                                 <option className="option-select" value={'Centro de acopio'}>Centro de acopio</option>
                                                 <option className="option-select" value={'Transferencia Bancaria'}>Transferencia Bancaria</option>
@@ -306,7 +306,7 @@ class OrganizationSearchComponent extends React.Component {
                                         </div>
                                         <div className="form-group col-12 col-sm-6 col-md-3 select-container">
                                             <label className="label-filter" htmlFor='stateInput' style={{ color: '#FF5A4D' }}>Departamento</label>
-                                            <select id="stateInput" className="form-control select-element" value={this.state.filters.Departamento} onChange={(value) => this.setState({ filters: { ...this.state.filters, Departamento: value.target.value } })}>
+                                            <select id="stateInput" className="form-control custom-select" value={this.state.filters.Departamento} onChange={(value) => this.setState({ filters: { ...this.state.filters, Departamento: value.target.value } })}>
                                                 <option className="option-select" defaultValue value={'none'}>Todos</option>
                                                 <option className="option-select" value={'San Salvador'}>San Salvador</option>
                                                 <option className="option-select" value={'San Vicente'}>San Vicente</option>
@@ -326,9 +326,9 @@ class OrganizationSearchComponent extends React.Component {
                                         </div>
                                         <div className="form-group col-12 col-sm-6 col-md-3 select-container">
                                             <label className="label-filter" htmlFor='helpInput' style={{ color: '#FF5A4D' }}>Para</label>
-                                            <select id="helpInput" className="form-control select-element" value={this.state.filters.help_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, help_type: value.target.value } })}>
+                                            <select id="helpInput" className="form-control custom-select pt-2" value={this.state.filters.help_type} onChange={(value) => this.setState({ filters: { ...this.state.filters, help_type: value.target.value } })}>
                                                 <option defaultValue value={'none'} >Todos</option>
-                                                <option className="option-select" value={'Niños'}>Niños</option>
+                                                <option className="option-select p-0" value={'Niños'}>Niños</option>
                                                 <option className="option-select" value={'Mujeres'}>Mujeres</option>
                                                 <option className="option-select" value={'Hombres'}>Hombres</option>
                                                 <option className="option-select" value={'Comunidad Gnral.'}>Comunidad Gnral.</option>

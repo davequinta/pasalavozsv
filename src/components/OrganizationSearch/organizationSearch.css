@@ -17,6 +17,7 @@
     margin-bottom: 0px;
 }
 
+
 .label-filter {
     padding: 0px;
     margin: 0;
@@ -28,6 +29,16 @@
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
     color: #FF5A4D;
+}
+
+.custom-select {
+    color: #FF5A4D;
+    
+    border-radius: 5px;
+    line-height: inherit;
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(28, 52, 73, 0.5);
+    line-height: 2rem;
 }
 
 .option-select {
@@ -72,7 +83,7 @@
         text-align: center;
         margin: 1rem 0 0 0;
     }
-    
+
     .btn-form-2 {
         height: 35px;
         background: #263C4F;
