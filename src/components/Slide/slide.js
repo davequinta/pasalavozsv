@@ -14,15 +14,15 @@ const SlideComponent = (props) => {
                         <div className="col-12 col-md-6 col-txt-index">
                             <div className="row">
                                 <div className="col-12">
-                                    <p className="txt-index gotham-medium">
+                                    <p className="txt-index gotham-light">
                                         La tormenta tropical “Amanda” ha traído consigo estragos que han afectado a los hogares más vulnerables de El Salvador. Daños en vivienda, inundaciones, desbordamientos, decenas de evacuados y muchas cosas más. 
                                     </p>
-                                    <p className="txt-index gotham-medium">
+                                    <p className="txt-index  gotham-light">
                                         “Pasá la Voz” es una iniciativa que pretende ayudar a todas aquellas personas que deseen aportar donaciones a los centros de acopio y/o transferencias bancarias.
                                     </p>
                                 </div>
                                 <div className="col-12">
-                                    <div className="row justify-content-center">
+                                    <div className="row justify-content-center justify-content-md-start pl-0 pl-md-3 ">
                                         <div className="col-11 col-sm-4 btn-index-help btn" onClick={props.moveHistory}>
                                             Solicitá ayuda
                                         </div>

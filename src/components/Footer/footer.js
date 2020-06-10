@@ -16,9 +16,9 @@ const FooterComponent = () => {
                             </div>
                             <div className="row">
                                 <div className="col-12 footer-email">
-                                    <p className="txt-row gotham-medium">
-                                        info@pasalavozsv.com
-                                    </p>
+                                    <a className="txt-row" href='mailto:mauriciotrejo.013@gmail.com' style={{ textDecoration: 'none' }}>
+                                        <p className='gotham-medium' style={{ color: '#FF5A4D' }}>info@pasalavozsv.com</p>
+                                    </a>
                                 </div>
                                 <div className="col-12 footer-txt">
                                     <p className="txt-row gotham-medium">

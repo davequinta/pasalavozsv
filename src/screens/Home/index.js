@@ -5,6 +5,7 @@ import NavbarTComponent from "../../components/Navbar/navbar_transparent";
 import SlideComponent from "../../components/Slide/slide";
 import ZonesComponent from "../../components/Zones/zones";
 import FooterComponent from "../../components/Footer/footer";
+import JoinFormComponent from "../../components/JoinForm/joinForm";
 
 
 import firebase from 'firebase'
@@ -37,9 +38,10 @@ class HomeScreen extends Component {
             <>
                 <NavbarTComponent />
                 <div className='main-container gotham-medium'>
-                    <SlideComponent navigationHandler={this.navigationHandler} moveHistory={() => this.props.history.push('/helpForm') }/>
-                        <ZonesComponent navigationOrg={this.organizationsNavigation} />
-                        <FooterComponent />
+                    <SlideComponent navigationHandler={this.navigationHandler} moveHistory={() => this.props.history.push('/helpForm')} />
+                    <ZonesComponent navigationOrg={this.organizationsNavigation} />
+                    <JoinFormComponent />
+                    <FooterComponent />
                 </div>
             </>
         )

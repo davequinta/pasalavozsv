@@ -30,10 +30,11 @@ class OrganizationSearchComponent extends React.Component {
 
 
 
+
     retrieveOrganizations = async () => {
         let aux_docs = []
         let selected_docs = []
-        const docs = await firebase.firestore().collection('organizations').get()
+        const docs = await firebase.firestore().collection('organizations').where('review', '==', true).get()
         docs.forEach(doc => {
 
             aux_docs.push(doc.data())
@@ -340,7 +341,7 @@ class OrganizationSearchComponent extends React.Component {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-1 d-flex justify-content-center align-items-end pb-1">
                                     <div className="w-100">
-                                        <div className="btn-form" onClick={this._filterHandler} style={{cursor:'pointer'}}>
+                                        <div className="btn-form" onClick={this._filterHandler} style={{ cursor: 'pointer' }}>
                                             <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
                                                 <div >
                                                     <FaFilter />
@@ -351,7 +352,7 @@ class OrganizationSearchComponent extends React.Component {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-1  d-flex justify-content-center align-items-end pb-1">
                                     <div className="w-100">
-                                        <div className="btn-form-2" onClick={this.clearFilters} style={{cursor:'pointer'}}>
+                                        <div className="btn-form-2" onClick={this.clearFilters} style={{ cursor: 'pointer' }}>
                                             <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
                                                 <div>
                                                     <FaBroom />
@@ -369,12 +370,12 @@ class OrganizationSearchComponent extends React.Component {
                     <div className="col-10">
                         <div className="row justify-content-around">
                             {
-                                this.state.organizationsShown.length>0 ?
-                                this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={() => this.moveOrganizationProfile(organization)} key={index.toString()} />)
-                                : 
-                                <section className='d-flex justify-content-center align-item-center mt-3' style={{height:'5rem'}}>
-                                    <span className='gotham-medium' style={{color:'#000000'}}>Aún no tenemos información registrada para esta búsqueda.</span>
-                                </section>
+                                this.state.organizationsShown.length > 0 ?
+                                    this.state.organizationsShown.map((organization, index) => <OrganizationCardComponent organization={organization} moveTo={() => this.moveOrganizationProfile(organization)} key={index.toString()} />)
+                                    :
+                                    <section className='d-flex justify-content-center align-item-center mt-3' style={{ height: '5rem' }}>
+                                        <span className='gotham-medium' style={{ color: '#000000' }}>Aún no tenemos información registrada para esta búsqueda.</span>
+                                    </section>
                             }
                         </div>
                     </div>
