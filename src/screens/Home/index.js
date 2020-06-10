@@ -37,9 +37,9 @@ class HomeScreen extends Component {
             <>
                 <NavbarTComponent />
                 <div className='main-container gotham-medium'>
-                    <SlideComponent navigationHandler={this.navigationHandler} />
-                    <ZonesComponent navigationOrg={this.organizationsNavigation} />
-                    <FooterComponent />
+                    <SlideComponent navigationHandler={this.navigationHandler} moveHistory={() => this.props.history.push('/helpForm') }/>
+                        <ZonesComponent navigationOrg={this.organizationsNavigation} />
+                        <FooterComponent />
                 </div>
             </>
         )
