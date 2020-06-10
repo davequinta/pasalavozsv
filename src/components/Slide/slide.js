@@ -8,8 +8,8 @@ const SlideComponent = (props) => {
             <div className="row justify-content-center align-items-center row-container">
                 <div className="col-11">
                     <div className="row align-items-center justify-content-center">
-                        <div className="col-12 col-sm-8 col-md-6">
-                            <img className="img-header-index" src={require('../../assets/img/header_index.png')}></img>
+                        <div className="col-12 col-sm-8 col-md-6 cont-img-index">
+                            <img className="img-header-index" src={require('../../assets/img/header.png')}></img>
                         </div>
                         <div className="col-12 col-md-6 col-txt-index">
                             <div className="row">

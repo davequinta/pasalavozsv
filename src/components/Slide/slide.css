@@ -1,5 +1,5 @@
 .cont-header-index {
-    background: #263C4F;
+    background:#2e4259;
     height: 100vh;
     top: 0;
 }
@@ -8,8 +8,13 @@
     height: 100%;
 }
 
+.cont-img-index {
+    overflow: hidden;
+}
+
 .img-header-index {
-    width: 100%;
+    width: 120%;
+    margin-left: -10%;
     height: auto;
 }
 
