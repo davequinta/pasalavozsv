@@ -340,7 +340,7 @@ class OrganizationSearchComponent extends React.Component {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-1 d-flex justify-content-center align-items-end pb-1">
                                     <div className="w-100">
-                                        <div className="btn-form" onClick={this._filterHandler}>
+                                        <div className="btn-form" onClick={this._filterHandler} style={{cursor:'pointer'}}>
                                             <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
                                                 <div >
                                                     <FaFilter />
@@ -351,7 +351,7 @@ class OrganizationSearchComponent extends React.Component {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-1  d-flex justify-content-center align-items-end pb-1">
                                     <div className="w-100">
-                                        <div className="btn-form-2" onClick={this.clearFilters}>
+                                        <div className="btn-form-2" onClick={this.clearFilters} style={{cursor:'pointer'}}>
                                             <IconContext.Provider value={{ color: "white", className: "global-class-name" }}>
                                                 <div>
                                                     <FaBroom />
