@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import "./Home.css";
-import NavbarComponent from "../../components/Navbar";
+import NavbarTComponent from "../../components/Navbar/navbar_transparent";
 import SlideComponent from "../../components/Slide/slide";
 import ZonesComponent from "../../components/Zones/zones";
 import FooterComponent from "../../components/Footer/footer";
@@ -35,12 +35,11 @@ class HomeScreen extends Component {
 
         return (
             <>
-                <NavbarComponent />
+                <NavbarTComponent />
                 <div className='main-container gotham-medium'>
                     <SlideComponent navigationHandler={this.navigationHandler} />
                     <ZonesComponent navigationOrg={this.organizationsNavigation} />
                     <FooterComponent />
-
                 </div>
             </>
         )

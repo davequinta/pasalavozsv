@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from 'react-router-dom';
 import './organizationProfile.css';
-import NavbarComponent from "../../components/Navbar";
+import NavbarTComponent from "../../components/Navbar/navbar_transparent";
 import FooterComponent from "../../components/Footer/footer";
 import OrganizationHeaderComponent from "../../components/OrganizationHeader/organizationHeader";
 
@@ -20,7 +20,7 @@ class OrganizationProfileScreen extends Component {
     render() {
         return (
             <>
-                <NavbarComponent />
+                <NavbarTComponent />
                 <div className='gotham-medium'>
                     <OrganizationHeaderComponent />
                     <FooterComponent />

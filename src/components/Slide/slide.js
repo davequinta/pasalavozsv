@@ -1,22 +1,34 @@
 import React from 'react'
 import './slide.css';
+import { FaRegQuestionCircle } from 'react-icons/fa';
 
 const SlideComponent = (props) => {
     return (
-        <div className="container-fluid">
-            <div className="row justify-content-center">
-                <div className="col-11 col-sm-10 col-md-11 slider">
-                    <img className="img-slide" src={require('../../assets/img/slide/slide_1.png')}></img>
-                </div>
-            </div>
-            <div className="row justify-content-center text-container">
-                <div className="col-12 col-sm-10">
-                    <p className="slide-text">
-                        La tormenta tropical “Amanda” ha traído consigo estragos que han afectado a los hogares más vulnerables de El Salvador. Daños en vivienda, inundaciones, desbordamientos, decenas de evacuados y muchas cosas más. “Pasá la Voz” es una iniciativa que pretende ayudar a todas aquellas personas que deseen aportar donaciones a los centros de acopio y/o transferencias bancarias. En este sitio encontrarás todos los detalles de cómo y dónde donar, hacia donde dirigir tus donativos. Todo organizado según zonas y necesidades.
-                    </p>
-                    <div className="row justify-content-center">
-                        <div className="col-10 col-sm-3 btn-slider" onClick={props.navigationHandler}>
-                            Solicitar Ayuda
+        <div className="container-fluid cont-header-index">
+            <div className="row justify-content-center align-items-center row-container">
+                <div className="col-11">
+                    <div className="row align-items-center justify-content-center">
+                        <div className="col-12 col-sm-8 col-md-6">
+                            <img className="img-header-index" src={require('../../assets/img/header_index.png')}></img>
+                        </div>
+                        <div className="col-12 col-md-6 col-txt-index">
+                            <div className="row">
+                                <div className="col-12">
+                                    <p className="txt-index">
+                                        La tormenta tropical “Amanda” ha traído consigo estragos que han afectado a los hogares más vulnerables de El Salvador. Daños en vivienda, inundaciones, desbordamientos, decenas de evacuados y muchas cosas más. 
+                                    </p>
+                                    <p className="txt-index">
+                                        “Pasá la Voz” es una iniciativa que pretende ayudar a todas aquellas personas que deseen aportar donaciones a los centros de acopio y/o transferencias bancarias.
+                                    </p>
+                                </div>
+                                <div className="col-12">
+                                    <div className="row justify-content-center">
+                                        <div className="col-11 col-sm-4 btn-index-help">
+                                            Solicitá ayuda
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
